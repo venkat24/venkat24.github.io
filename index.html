@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Venkatraman Srikanth</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway');
+
+* { margin: 0; padding: 0; }
+html {
+    height: 100%;
+}
+body {
+    font-size: 16px;
+    background: url(images/space.jpg) no-repeat center center fixed;
+    color: gray;
+    text-align: center;
+    height: 100%;
+}
+
+#block-container {
+    top: 50vh;
+    transform: translateY(-50%);
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    position: relative;
+    background-color: #f4f4f4;
+    border-radius: 7px;
+    padding:  5px 20px;
+    opacity: 0.92;
+    -webkit-animation-duration: 2 s;
+            animation-duration: 2 s;
+    -webkit-box-shadow: 18px 11px 135px -25px black;
+            box-shadow: 18px 11px 135px -25px black;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+            transition: 0.5s;
+    -webkit-perspective: 1500px;
+            perspective: 1500px;
+}
+
+@media screen and (max-width: 500px) {
+    #block-container {
+        width: 80%;
+    }
+}
+
+#profile-image {
+    display: inline-block;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+    #profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+#profile-image:hover {
+    filter: none;
+    transform: scale(1.05);
+}
+
+
+#text-container {
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 26px;
+    color: gray;
+}
+
+footer {
+    opacity: 0.2;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.5s ease-in-out;
+    margin: 5px auto;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        display: none;
+    }
+}
+
+footer:hover {
+    opacity: 0.9;
+}
+
+.footer-text {
+    font-size: 12px;
+}
+
+.footer-text a {
+    text-decoration: none;
+    color: white;
+}
+
+.small-link {
+    font-size: 16px;
+}
+
+.highlight {
+    color: #8b2f5f;
+}
+
+h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div id="block-container" class="animated fadeIn">
+    <div class="face front">
+        <img src="images/profile-img2.jpg" id="profile-image">
+        <div id="text-container">
+            <h1 class="name-tag">VENKATRAMAN SRIKANTH</h1> 
+            <br><hr><br>
+            My name is Venkatraman, or Venkat for short. I'm a programmer, with an interest in web development and functional programming. <br><br>
+            I am currently in my senior year of Computer Science and Engineering at <a class="link small-link highlight" href="http://nitt.edu">NIT Trichy</a>, one of India's top universities.<br><br>
+
+            Check out my <a class="link small-link highlight" href="https://medium.com/@venkat24">Blog</a>, or my <a class="link small-link highlight" href="Venkatraman_Resume.pdf">Resumé</a>!
+            <br><br>
+
+            <div id="links-container">
+              <span class="github">
+                <a class="link" href="/Venkatraman_Resume.pdf">
+                  <i class="fa fa-lg fa-file-text"></i>
+                </a>
+              </span>
+              <span class="github">
+                <a class="link" href="https://github.com/venkat24">
+                  <i class="fa fa-lg fa-github"></i>
+                </a>
+              </span>
+              <span class="github">
+                <a class="link" href="https://www.linkedin.com/in/venkatraman-srikanth-178405131">
+                  <i class="fa fa-lg fa-linkedin"></i>
+                </a>
+              </span>
+              <span class="facebook">
+                <a class="link" href="mailto:venkat24@outlook.com">
+                  <i class="fa fa-lg fa-envelope"></i>
+                </a>
+              </span>
+              <span class="facebook">
+                <a class="link" href="https://www.facebook.com/acelect24">
+                  <i class="fa fa-lg fa-facebook"></i>
+                </a>
+              </span>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-text">
+        Made with <a class="footer-link" target="_blank" href="https://github.com/sirxemic/jquery.ripples">jQuery.ripples</a>, <a class="footer-link" target="_blank" href="http://fontawesome.io">FontAwesome</a> and loads of ❤
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="jquery.ripples.js"></script>
+<script>
+$(document).ready(function() {
+    try {
+        $('body').ripples({
+            resolution: 512,
+            dropRadius: 10,
+            perturbance: 0.05,
+        });
+    }
+    catch (e) {
+        $('.error').show().text(e);
+    }
+
+    $('.js-ripples-disable').on('click', function() {
+        $('body, main').ripples('destroy');
+        $(this).hide();
+    });
+
+    $('.js-ripples-play').on('click', function() {
+        $('body, main').ripples('play');
+    });
+
+    $('.js-ripples-pause').on('click', function() {
+        $('body, main').ripples('pause');
+    });
+
+    // Automatic drops
+    setInterval(function() {
+        var $el = $('main');
+        var x = Math.random() * $el.outerWidth();
+        var y = Math.random() * $el.outerHeight();
+        var dropRadius = 20;
+        var strength = 0.04 + Math.random() * 0.04;
+
+        $el.ripples('drop', x, y, dropRadius, strength);
+    }, 400);
+});
+</script>
+</body>
+</html>
